@@ -1,13 +1,13 @@
-package prod.project.studentorder.validator;
+package prod.validator;
 
-import prod.project.studentorder.domain.AnswerCityRegister;
-import prod.project.studentorder.domain.StudentOrder;
+import prod.domain.AnswerCityRegister;
+import prod.domain.StudentOrder;
 
 public class CityRegisterValidator {
    private String hostName;
    private String login;
    private String password;
-    static AnswerCityRegister checkCityRegister(StudentOrder studentOrder){
+    public static AnswerCityRegister checkCityRegister(StudentOrder studentOrder){
         AnswerCityRegister answer = new AnswerCityRegister();
         answer.success = false;
         return answer;

@@ -1,11 +1,14 @@
-package prod.project.studentorder.validator;
+package prod;
 
-import prod.project.studentorder.StudentValidator;
+import prod.domain.*;
+import prod.mail.MailSender;
+import prod.validator.*;
 
-public class StudentOrderValidator
-{
+
+public class StudentOrderValidator {
     public static void main(String[] args) {
-       checkAll();
+        checkAll();
+        System.out.println("Ok");
     }
 
     static void checkAll() {
@@ -26,8 +29,8 @@ public class StudentOrderValidator
         }
     }
 
-     static void sendMail(StudentOrder studentOrder) {
-         MailSender.sendMail(studentOrder);
+    static void sendMail(StudentOrder studentOrder) {
+        MailSender.sendMail(studentOrder);
     }
 
     static StudentOrder readStudentOrder(){
@@ -35,7 +38,7 @@ public class StudentOrderValidator
         return studentOrder;
     }
     static AnswerCityRegister checkCityRegister(StudentOrder studentOrder){
-       return CityRegisterValidator.checkCityRegister(studentOrder);
+        return CityRegisterValidator.checkCityRegister(studentOrder);
     }
     static AnswerWedding checkWedding(StudentOrder studentOrder){
         return WeddingValidator.checkWedding(studentOrder);
@@ -47,6 +50,6 @@ public class StudentOrderValidator
     }
 
     static AnswerStudent checkStudent(StudentOrder studentOrder){
-       return StudentValidator.checkStudent(studentOrder);
+        return StudentValidator.checkStudent(studentOrder);
     }
 }
