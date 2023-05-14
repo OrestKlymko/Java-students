@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class Person {
     protected String surName;
     protected String givenName;
-    protected LocalDate dateOfBirth;
-    protected String patronymic;
+    private LocalDate dateOfBirth;
+    private String patronymic;
 
 
 
