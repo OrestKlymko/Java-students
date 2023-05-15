@@ -2,13 +2,19 @@ package prod.domain;
 
 import java.time.LocalDate;
 
-public class Person {
+public abstract class Person {
     protected String surName;
     protected String givenName;
     private LocalDate dateOfBirth;
     private String patronymic;
 
-
+    public Person(String surName, String givenName, LocalDate dateOfBirth, String patronymic, Adress adress) {
+        this.surName = surName;
+        this.givenName = givenName;
+        this.dateOfBirth = dateOfBirth;
+        this.patronymic = patronymic;
+        this.adress = adress;
+    }
 
     private Adress adress;
 

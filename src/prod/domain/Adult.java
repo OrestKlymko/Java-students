@@ -1,5 +1,4 @@
 package prod.domain;
-
 import java.time.LocalDate;
 
 public class Adult extends Person{
@@ -9,6 +8,20 @@ public class Adult extends Person{
     private String issueDepartment;
     private String university;
     private String studentID;
+
+    public Adult(String surName, String givenName, LocalDate dateOfBirth, String patronymic, Adress adress, String passportSeria, String passportNumber, LocalDate issueDate, String issueDepartment, String university, String studentID) {
+        super(surName, givenName, dateOfBirth, patronymic, adress);
+        this.passportSeria = passportSeria;
+        this.passportNumber = passportNumber;
+        this.issueDate = issueDate;
+        this.issueDepartment = issueDepartment;
+        this.university = university;
+        this.studentID = studentID;
+    }
+
+    public Adult(String surName, String givenName, LocalDate dateOfBirth, String patronymic, Adress adress) {
+        super(surName, givenName, dateOfBirth, patronymic, adress);
+    }
 
     public String getPersonString(){
         return  surName+" "+givenName+" "+passportNumber;
